@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url('../assets/background.jpg') center / cover no-repeat; */
+    background: #121212;
+}
+
+h3 {
+    color: #fff;
+    font-family: 'Poppins';
+    text-align: center;
+
+}
+
+form {
+    width: 260px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form input,
+button {
+    border: none;
+    height: 40px;
+    outline: none;
+    border-radius: 2px;
+    padding: .375em 1.125em;
+    transform: translateY(0);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+
+    transition:
+        border-top-left-radius var(--dur) var(--delay) ease-out,
+        border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+        border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+        border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+        box-shadow calc(var(--dur) * 4) ease-out,
+        transform calc(var(--dur) * 4) ease-out,
+        background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+button:hover {
+    box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+    transform: translateY(-4px);
+    border-top-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    background: red;
+}
+
+input:focus {
+    box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+    transform: translateY(-4px);
+    border-top-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    background-color: #fff;
+    color: #333333;
+}
+
+
+form input {
+    width: 260px;
+    margin: 5px 0;
+    background: #333333;
+    padding: 0 10px;
+    color: #fff;
+}
+
+form input::placeholder {
+    font-family: 'Poppins', sans-serif;
+}
+
+form button {
+    background: none;
+    border: 1px solid red;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* .content p {
+    width: 260px;
+    color: #737373;
+    font-size: 13px;
+}
+
+.content p a {
+    text-align: center;
+    color: #737373;
+    text-decoration: none;
+} */
